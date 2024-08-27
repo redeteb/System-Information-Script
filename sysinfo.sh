@@ -10,11 +10,10 @@ ask_choice() {
     (6) Top 5 CPU Processes
     (7) Network Connectivity
     (8) Exit"
-
     read choice
 }
 
-print_myusername() {
+print_ipadresses() {
     echo "123"
 }
 
@@ -22,11 +21,26 @@ print_username() {
     echo "$(whoami)"
 }
 
-#free_cpu=
-#free_memory=
-#top_memory=
-#top_cpu=
-#network=
+print_cpu() {
+    echo "CPU"
+}
+
+print_memory() {
+    echo "memory"
+}
+
+print_topmemory() {
+    echo "top 5 memory"
+}
+
+print_topcpu() {
+    echo "top 5 cpu"
+}
+
+print_network() {
+    echo "network connectivity"
+}
+
 
 
 echo "What would you like to check?
@@ -45,12 +59,12 @@ if [ "$choice" == "8" ]; then
     exit
 
 elif [ "$choice" == "1" ]; then
-    echo "123"
+    print_ipadresses
 
 elif [ "$choice" == "2" ]; then
     print_username
 
 elif [ "$choice" == "3" ]; then
-    echo "CPU"
+    print_CPU
 
 fi
