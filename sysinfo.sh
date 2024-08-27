@@ -13,9 +13,23 @@ ask_choice() {
     read choice
 }
 
+
 print_ipadresses() {
     echo "123"
+    $(ask_choice)
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 print_username() {
     echo "$(whoami)"
