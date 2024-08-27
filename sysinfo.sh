@@ -65,6 +65,18 @@ elif [ "$choice" == "2" ]; then
     print_username
 
 elif [ "$choice" == "3" ]; then
-    print_CPU
+    print_cpu
+
+elif [ "$choice" == "4" ]; then
+    print_memory
+
+elif [ "$choice" == "5" ]; then
+    print_topmemory
+
+elif [ "$choice" == "6" ]; then
+    print_topcpu
+
+elif [ "$choice" == "7" ]; then
+    print_network
 
 fi
