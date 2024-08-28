@@ -1,35 +1,9 @@
 #!/bin/bash
 
-ask_choice() {
-    echo "What would you like to check?
-    (1) My Public and Private Addresses
-    (2) My Username
-    (3) Free CPU Amount
-    (4) Free Memory Amount
-    (5) Top 5 Memory Processes
-    (6) Top 5 CPU Processes
-    (7) Network Connectivity
-    (8) Exit"
-    read choice
-}
-
-
-print_ipadresses() {
+#Functions for each menu option
+print_ipaddresses() {
     echo "123"
-    $(ask_choice)
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 print_username() {
     echo "$(whoami)"
@@ -56,41 +30,53 @@ print_network() {
 }
 
 
+ask_choice() {
+    echo "What would you like to check?
+    (1) My Public and Private Addresses
+    (2) My Username
+    (3) CPU Information
+    (4) Memory Information
+    (5) Top 5 Memory Processes
+    (6) Top 5 CPU Processes
+    (7) Network Connectivity
+    (8) Exit"
 
-echo "What would you like to check?
-(1) My Public and Private Adresses
-(2) My Username
-(3) Free CPU Amount
-(4) Free Memory Amount
-(5) Top 5 Memory Processes
-(6) Top 5 CPU Processes
-(7) Network Conectivity
-(8) leave"
+    read choice
+}
 
-read choice
 
-if [ "$choice" == "8" ]; then
-    exit
+#Function to start the script
 
-elif [ "$choice" == "1" ]; then
-    print_ipadresses
+ask_choice
 
-elif [ "$choice" == "2" ]; then
-    print_username
 
-elif [ "$choice" == "3" ]; then
-    print_cpu
+while [ "$choice" != "8" ]; do
 
-elif [ "$choice" == "4" ]; then
-    print_memory
+    if [ "$choice" == "1" ]; then
+        print_ipaddresses
 
-elif [ "$choice" == "5" ]; then
-    print_topmemory
+    elif [ "$choice" == "2" ]; then
+        print_username
 
-elif [ "$choice" == "6" ]; then
-    print_topcpu
+    elif [ "$choice" == "3" ]; then
+        print_cpu
 
-elif [ "$choice" == "7" ]; then
-    print_network
+    elif [ "$choice" == "4" ]; then
+        print_memory
 
-fi
+    elif [ "$choice" == "5" ]; then
+        print_topmemory
+
+    elif [ "$choice" == "6" ]; then
+        print_topcpu
+
+    elif [ "$choice" == "7" ]; then
+        print_network
+    fi
+
+    ask_choice
+done 
+
+echo "Exited."
+
+
