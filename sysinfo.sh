@@ -20,7 +20,7 @@ print_memory() {
 }
 
 print_topmemory() {
-   echo top -i M
+    top -b -o +%MEM | head -n 12
 }
 
 print_topcpu() {
