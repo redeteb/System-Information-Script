@@ -12,13 +12,11 @@ print_username() {
 }
 
 print_cpu() {
-   freecpu=$()
-   echo "You currently have ($freecpu)."
+   lscpu | egrep 'CPU\(s\):'
 }
 
 print_memory() {
-    freememory=$()
-    echo "You currently have ($freememory)."
+    grep MemTotal /proc/meminfo
 }
 
 print_topmemory() {
