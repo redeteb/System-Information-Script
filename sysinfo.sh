@@ -12,15 +12,17 @@ print_username() {
 }
 
 print_cpu() {
-    echo "CPU"
+   freecpu=$()
+   echo "You currently have ($freecpu)."
 }
 
 print_memory() {
-    echo "memory"
+    freememory=$()
+    echo "You currently have ($freememory)."
 }
 
 print_topmemory() {
-    echo "top 5 memory"
+   echo top -i M
 }
 
 print_topcpu() {
@@ -28,7 +30,9 @@ print_topcpu() {
 }
 
 print_network() {
-    echo "network connectivity"
+    echo "Enter any website: "
+    read website
+    echo "thank you!"
 }
 
 
@@ -80,5 +84,3 @@ while [ "$choice" != "8" ]; do
 done 
 
 echo "Exited."
-
-
