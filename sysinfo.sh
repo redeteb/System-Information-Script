@@ -24,7 +24,7 @@ print_topmemory() {
 }
 
 print_topcpu() {
-    echo "top 5 cpu"
+    top -b -o +%CPU | head -n 12
 }
 
 print_network() {
