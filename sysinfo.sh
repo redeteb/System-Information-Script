@@ -28,9 +28,14 @@ print_topcpu() {
 }
 
 print_network() {
-    echo "Enter any website: "
+    echo "Enter a website or IP address:"
     read website
-    echo "thank you!"
+
+    if ping -c 4 "$website" &> /dev/null; then
+        echo "Connection was successful."
+    else
+        echo "Connection has failed."
+    fi
 }
 
 
