@@ -12,7 +12,7 @@ print_username() {
 }
 
 print_cpu() {
-   lscpu | egrep 'CPU\(s\):'
+   lscpu | grep -E 'CPU\(s\):'
 }
 
 print_memory() {
