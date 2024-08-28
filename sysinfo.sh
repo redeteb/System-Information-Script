@@ -2,11 +2,13 @@
 
 #Functions for each menu option
 print_ipaddresses() {
-    echo "123"
+    publicip=$(curl -s ifconfig.me)
+    privateip=$(hostname -i)
+    echo "Your Public Ip is ($publicip) and your Private IP is ($privateip)."
 }
 
 print_username() {
-    echo "$(whoami)"
+    echo "Your current user is $(whoami)."
 }
 
 print_cpu() {
